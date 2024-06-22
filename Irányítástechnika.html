@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Irányítástechnika - Kidolgozott kérdéssor</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h3 id="plc-k-kategorizálása">1. PLC-k kategorizálása</h3>
+<p>A PLC-k kategorizálása a be/ki vonalak száma alapján történik, és három fő kategóriába sorolhatók:</p>
+<ul>
+<li><strong>Kis konfiguráció:</strong> kevesebb, mint 500 be/ki vonal. Ezek a PLC-k kisebb rendszerek vezérlésére alkalmasak, például egyszerű gépek vagy folyamatok automatizálására.</li>
+<li><strong>Közepes konfiguráció:</strong> 500 és 5000 be/ki vonal között. Ezeket közepes méretű gyártósorok vagy komplex gépi rendszerek vezérlésére használják.</li>
+<li><strong>Nagy konfiguráció:</strong> több mint 5000 be/ki vonal. Nagyobb ipari rendszerek, teljes gyártósorok, vagy komplex folyamatok automatizálására szolgálnak.</li>
+</ul>
+<p>A mechanikai kivitel alapján történő csoportosítás a PLC-k fizikai kialakítását jelzi:</p>
+<ul>
+<li><strong>Micro-PLC:</strong> Kompakt, kis méretű PLC-k, amelyek egyszerű, kisebb feladatok elvégzésére alkalmasak.</li>
+<li><strong>Kompakt PLC:</strong> Integrált kialakítású, közepes méretű PLC-k, amelyek többféle be/ki vonallal rendelkeznek.</li>
+<li><strong>Moduláris PLC:</strong> Olyan PLC-k, amelyek különálló modulokból állnak, és könnyen bővíthetők további funkciókkal és be/ki vonalakkal.</li>
+</ul>
+<h3 id="plc-ben-használt-memóriák">2. PLC-ben használt memóriák</h3>
+<p>A PLC-kben különböző típusú memóriák találhatók, amelyek különböző célokat szolgálnak:</p>
+<ul>
+<li>
+<p><strong>Félvezető memóriák:</strong></p>
+<ul>
+<li><strong>ROM (Read-Only Memory):</strong> Csak olvasható memória, amelyben az alapvető programok és konfigurációk találhatók.</li>
+<li><strong>RAM (Random-Access Memory):</strong> Írható és olvasható memória, amely ideiglenes adatokat és változókat tárol.</li>
+<li><strong>EPROM (Erasable Programmable Read-Only Memory):</strong> Törölhető és újraprogramozható memória.</li>
+<li><strong>EAROM (Electrically Alterable Read-Only Memory):</strong> Elektromosan módosítható memória.</li>
+<li><strong>EEPROM (Electrically Erasable Programmable Read-Only Memory):</strong> Elektromosan törölhető és újraprogramozható memória.</li>
+</ul>
+</li>
+<li>
+<p><strong>Funkciók szerint:</strong></p>
+<ul>
+<li><strong>Program memória:</strong> A PLC programjainak tárolására szolgál.</li>
+<li><strong>Adatmemória:</strong> A státuszok, digitalizált analóg értékek, időzítő és számláló numerikus értékei tárolására szolgál.</li>
+</ul>
+</li>
+<li>
+<p><strong>Programozási szempontból:</strong></p>
+<ul>
+<li><strong>Input memória:</strong> A bemeneti jelek tárolására szolgál.</li>
+<li><strong>Output memória:</strong> A kimeneti jelek tárolására szolgál.</li>
+<li><strong>Bitmemória (märker):</strong> Ideiglenes adatokat és változókat tárol.</li>
+</ul>
+</li>
+<li>
+<p><strong>További tárolási feladatok:</strong></p>
+<ul>
+<li><strong>Idő adatok tárolása:</strong> Az időzítőkkel kapcsolatos adatokat tárolja.</li>
+<li><strong>Számláló adatok tárolása:</strong> A számlálóval kapcsolatos adatokat tárolja.</li>
+<li><strong>Átmeneti adatok tárolása:</strong> Ideiglenes adatokat tárol, amelyek a program futása során keletkeznek.</li>
+</ul>
+</li>
+</ul>
+<h3 id="alapszoftver">3. Alapszoftver</h3>
+<p>A PLC alapszoftverét az operációs rendszer biztosítja, amely a PLC működésének alapvető funkcióit vezérli. Az alapszoftver funkciói a következők:</p>
+<ul>
+<li><strong>Interpreter futtatása:</strong> A programkód értelmezése és végrehajtása.</li>
+<li><strong>Státuszszó-generálás (CPU flag-ek):</strong> Az aktuális működési állapot jelzése.</li>
+<li><strong>Önteszt funkció:</strong> A rendszer önellenőrzése a hibák felderítése érdekében.</li>
+<li><strong>Kommunikációs vonalak kezelése:</strong> Az adatkommunikáció irányítása különböző eszközök között.</li>
+<li><strong>Ember-gép kapcsolat biztosítása:</strong> Felhasználói interfész biztosítása a kezelőszemélyzet számára.</li>
+<li><strong>Programfejlesztési funkció:</strong> Programírás és fejlesztés támogatása.</li>
+<li><strong>Hibakezelés:</strong> Hibaészlelés és hibaelhárítás.</li>
+<li><strong>Megszakításkezelés:</strong> Megszakítások kezelése a különböző eseményekre való gyors reagálás érdekében.</li>
+<li><strong>Set-up (boot) és reset funkciók biztosítása:</strong> A rendszer indítása és újraindítása.</li>
+</ul>
+<h3 id="plc-felépítése-az-iec-61131-3-szabvány-szerint">4. PLC felépítése az IEC 61131-3 szabvány szerint</h3>
+<p>Az IEC 61131-3 szabvány a PLC szoftverek fejlesztésére vonatkozó nemzetközi szabvány, amely meghatározza a PLC-k programozásához használt nyelveket és szerkezeti elemeket. A szabvány szerinti felépítés a következőket tartalmazza:</p>
+<ul>
+<li><strong>Programozási nyelvek:</strong> Az IEC 61131-3 szabvány öt programozási nyelvet definiál: Ladder Diagram (LD), Function Block Diagram (FBD), Structured Text (ST), Instruction List (IL), és Sequential Function Chart (SFC).</li>
+<li><strong>Szoftver szerkezeti elemek:</strong> Az IEC 61131-3 szabvány három alapvető programozási szervezési egységet (POU) határoz meg: Program, Funkcióblokk, és Funkció.</li>
+<li><strong>Adattípusok:</strong> Az IEC 61131-3 szabvány különböző elemi és összetett adattípusokat definiál a programokban használt adatok tárolására és kezelésére.</li>
+<li><strong>Taszkok:</strong> A taszkok segítségével szabályozható a programok és funkcióblokkok végrehajtása, lehetővé téve a ciklikus, eseményvezérelt és prioritás alapú futtatást.</li>
+</ul>
+<h3 id="iec-szoftvermodell-program">5. IEC-szoftvermodell: Program</h3>
+<p>Egy IEC program különböző IEC nyelveken megírt szoftver elemekből áll. A program funkcióblokkokat tartalmaz, melyek adatot cserélnek szoftver összeköttetésekkel, I/O változókat írnak és olvasnak, valamint más programokkal kommunikálnak. A programot a <code>PROGRAM</code> kulcsszóval definiálják és az <code>END_PROGRAM</code> kulcsszóval zárják.</p>
+<h3 id="iec-szoftvermodell-funkció-funkcióblokk-és-különbségük">6. IEC-szoftvermodell: Funkció; Funkcióblokk (és különbségük)</h3>
+<ul>
+<li><strong>Funkcióblokk (FB):</strong> Hierarchikus szoftvermodul, amely önálló feladat ellátására alkalmas. Bemeneti és kimeneti paraméterekkel rendelkezik, és statikus belső tárolást biztosít.</li>
+<li><strong>Funkció (FC vagy FUN):</strong> Algoritmus révén bemeneti értékek alapján kimeneti értéket állít elő. Nincs statikus belső tárolása, ezért mindig ugyanazt az eredményt adja azonos bemeneti paraméterek esetén.</li>
+</ul>
+<h3 id="iec-szoftvermodell-taszk">7. IEC-szoftvermodell: Taszk</h3>
+<p>A taszkok konfigurálása révén vezérelhető a programok és funkcióblokkok végrehajtása periodikusan vagy eseményvezérelt módon. Taszkok paraméterei közé tartozik a ciklikus futás beállítása (INTERVAL), eseményvezérelt futtatás (SINGLE), és a prioritás (PRIORITY).</p>
+<h3 id="iec-szoftvermodell-hívási-struktúra-pou-k-szerepe">8. IEC-szoftvermodell: Hívási struktúra; POU-k szerepe</h3>
+<p>A program szervezését blokkok révén valósítják meg, amelyeket programszervező egységeknek (POU) hívnak. POU típusai közé tartozik a program (PROGRAM), funkcióblokk (FUNCTION_BLOCK), és a funkció (FUNCTION). Ezek tartalmazzák a bemeneti, kimeneti és belső változókat, valamint az algoritmust.</p>
+<h3 id="elemi-adattípusok">9. Elemi adattípusok</h3>
+<p>Az elemi adattípusok egyszerű adatokat tárolnak és a következő kategóriákba sorolhatók:</p>
+<ul>
+<li><strong>Logikai típusok:</strong> BOOL (igaz/hamis értékek)</li>
+<li><strong>Egész típusok:</strong> BYTE (8 bites egész), WORD (16 bites egész), DWORD (32 bites egész), LWORD (64 bites egész)</li>
+<li><strong>Aláírt egész típusok:</strong> SINT (8 bites aláírt egész), INT (16 bites aláírt egész), DINT (32 bites aláírt egész), LINT (64 bites aláírt egész)</li>
+<li><strong>Nem aláírt egész típusok:</strong> USINT (8 bites nem aláírt egész), UINT (16 bites nem aláírt egész), UDINT (32 bites nem aláírt egész), ULINT (64 bites nem aláírt egész)</li>
+<li><strong>Valós típusok:</strong> REAL (32 bites valós szám), LREAL (64 bites valós szám)</li>
+<li><strong>Karakterlánc típusok:</strong> STRING (karakterlánc)</li>
+<li><strong>Idő típusok:</strong> TIME, DATE, TIME_OF_DAY, DATE_AND_TIME</li>
+</ul>
+<h3 id="összetett-adattípusok">10. Összetett adattípusok</h3>
+<p>Az összetett adattípusok több elemi adattípus kombinációjával jönnek létre és a következő kategóriákba sorolhatók:</p>
+<ul>
+<li><strong>Származtatott adattípusok:</strong> Az elemi adattípusok alapján létrehozott új típusok.<pre class=" language-pascal"><code class="prism  language-pascal"><span class="token keyword">TYPE</span>
+  Pressure<span class="token punctuation">:</span> REAL<span class="token punctuation">;</span>
+  LongFloatNum<span class="token punctuation">:</span> LREAL<span class="token punctuation">;</span>
+END_TYPE
+</code></pre>
+</li>
+<li><strong>Adatstruktúrák:</strong> Több adattípus kombinációjával létrehozott összetett struktúrák.<pre class=" language-pascal"><code class="prism  language-pascal"><span class="token keyword">TYPE</span> PRESSURE_SENSOR<span class="token punctuation">:</span>
+  STRUCT
+    INPUT<span class="token punctuation">:</span> Pressure<span class="token punctuation">;</span>
+    STATUS<span class="token punctuation">:</span> BOOL<span class="token punctuation">;</span>
+    CALIBRATION<span class="token punctuation">:</span> DATE<span class="token punctuation">;</span>
+    HIGH_LIMIT<span class="token punctuation">:</span> REAL<span class="token punctuation">;</span>
+    ALARM_COUNT<span class="token punctuation">:</span> INT<span class="token punctuation">;</span>
+  END_STRUCT
+END_TYPE
+</code></pre>
+</li>
+<li><strong>Felsorolás jellegű adattípusok:</strong> Egyedi nevekhez különböző állapotokat rendelhetünk.<pre class=" language-pascal"><code class="prism  language-pascal"><span class="token keyword">TYPE</span>
+  DEVICE_MOD<span class="token punctuation">:</span> <span class="token punctuation">(</span>INITIALISING<span class="token punctuation">,</span> RUNNING<span class="token punctuation">,</span> STANDBY<span class="token punctuation">,</span> FAULTY<span class="token punctuation">)</span><span class="token punctuation">;</span>
+END_TYPE
+</code></pre>
+</li>
+</ul>
+<h3 id="változótípusok-változó-deklarálása-speciális-változók">11. Változótípusok; Változó deklarálása; Speciális változók</h3>
+<p>A változók különböző típusú adatokat tárolnak és a következő kategóriákba sorolhatók:</p>
+<ul>
+<li><strong>Bemeneti változók (VAR_INPUT):</strong> Külső jelek fogadására szolgálnak.</li>
+<li><strong>Kimeneti változók (VAR_OUTPUT):</strong> Külső jelek küldésére szolgálnak.</li>
+<li><strong>Belső változók (VAR):</strong> Ideiglenes vagy állandó belső adatok tárolására szolgálnak.</li>
+</ul>
+<p>A változók deklar</p>
+<p>álása például a következőképpen történhet:</p>
+<pre class=" language-pascal"><code class="prism  language-pascal"><span class="token keyword">VAR</span>
+  OUT_DISP AT %QB6<span class="token punctuation">:</span> BYTE<span class="token punctuation">;</span>
+  ADC_4 AT %QD4<span class="token punctuation">:</span> DINT<span class="token punctuation">;</span>
+END_VAR
+</code></pre>
+<p>Speciális változók közé tartoznak a direkt reprezentált és a szimbolikus változók:</p>
+<ul>
+<li>
+<p><strong>Direkt reprezentált változók:</strong> Olyan változók, amelyek közvetlenül egy hardveres be/ki vonalhoz kapcsolódnak, például:</p>
+<pre class=" language-pascal"><code class="prism  language-pascal">%IX0<span class="token punctuation">.</span><span class="token number">0</span>
+%QW12
+%MW2
+</code></pre>
+</li>
+<li>
+<p><strong>Szimbolikus változók:</strong> Olyan változók, amelyek egy szimbólumhoz kapcsolódnak és az adott szimbólumhoz rendelt hardveres erőforrást reprezentálják.</p>
+</li>
+</ul>
+<h3 id="lad-programozási-nyelv">12. LAD programozási nyelv</h3>
+<p>A létradiagramos programozási nyelv (Ladder Diagram, LAD) az áramúttervből alakult ki, így a létradiagramok az áramúttervek szoftver megfelelőinek tekinthetők. A relé jellegű programozási nyelv kidolgozása a grafikai lehetőségekkel ellátott fejlesztőrendszerek által terjedt el. Népszerűségét a könnyű követhetőségnek és a gyors hibadiagnosztizálásnak köszönheti. A LAD elemei közé tartoznak a vezetékek, csatlakozások, kontaktusok (záró és bontó érintkezők), tekercsek, funkciók és funkcióblokkok. A LAD programozás szabályai közé tartozik, hogy az elemeket feszültségmentes állapotban ábrázolják, és a működtetett elemeket a jobb oldali függőleges egyenesbe kötik be.</p>
+<h3 id="fbd-programozási-nyelv">13. FBD programozási nyelv</h3>
+<p>A Funkcióblokk Diagram (FBD) az IEC 61131-3 szabvány egyik grafikus nyelv változata. A POU-k bemeneti és kimeneti paraméterekkel rendelkeznek, az algoritmus a bemeneti adatok alapján végrehajtja a műveletsort és állítja elő a kimeneti paramétereket. A hálózatok segítenek strukturálni az FB végrehajtási folyamatát, és minden hálózat rendelkezik egy címkével. A FBD hálózatokban visszacsatolás is lehetséges, és az EN/ENO változók segítségével szabályozható a funkciók végrehajtása. Az FBD-ről LAD és IL nyelvekre általában lehetséges a konverzió, de az ST nyelvre való konverzió korlátozott.</p>
+<h3 id="il-programozási-nyelv">14. IL programozási nyelv</h3>
+<p>Az utasításlistás programozási nyelv (Instruction List, IL) a PLC kialakulásával egyidős. Az IL egy hardver közeli, az assembly nyelv szabályaihoz hasonlóan alkalmazható nyelv, amely könnyen elsajátítható. Az utasításlistás programnyelv felhasználói programvezérlési parancsok (utasítások) sorozatából áll. Az IL nyelvben egy virtuális akkumulátor, az eredmény regiszter (Current Result - CR) van hozzárendelve, amely az aktuális feldolgozás alatti művelet adattípusának hosszával egyezik meg. Az IL nyelv operátorai közé tartoznak a Boole műveletek, tetszőleges típusú operandusokon végzett műveletek, és vezérlésátadó műveletek. Az IL nyelvű programok más nyelvekre való kon</p>
+<p>vertálása nehézkes, de más nyelvekről IL nyelvre viszonylag könnyen elvégezhető az átalakítás.</p>
+<h3 id="jelek-definíciója-osztályozása">15. Jelek definíciója, osztályozása</h3>
+<ul>
+<li><strong>Jel:</strong> Azokat a fizikai mennyiségeket, amelyek egy fizikai rendszer állapotát írják le valamely más fizikai mennyiség (pl. hely, idő, hőmérséklet) függvényeként, jelnek nevezzük.</li>
+<li><strong>Viselkedés:</strong> A jel viselkedését általában egyetlen független változó függvényében vizsgáljuk, ami leggyakrabban az idő.</li>
+<li><strong>Értékkészlet:</strong> A jel értékkészletét a jel amplitúdójának nevezzük.</li>
+<li><strong>Jelfeldolgozás:</strong> A jelfeldolgozás feladata a jel által hordozott információtartalom meghatározása.</li>
+<li><strong>Bemeneti és kimeneti jel:</strong> A jelek feldolgozása során bemeneti vagy bemenő jelnek nevezzük a feldolgozandó jelet, kimeneti vagy kimenő jelnek pedig a feldolgozás eredményeképpen előálló jelet.</li>
+</ul>
+<h3 id="technológiai-folyamatok-szervezeti-kerete">16. Technológiai folyamatok szervezeti kerete</h3>
+<p>A technológiai folyamatok szervezeti kerete a következő szintekre osztható:</p>
+<ul>
+<li><strong>Termelésirányítás:</strong> Stratégiai döntések, amelyek a gyár alapvető működését határozzák meg, mint például készletgazdálkodás, beszerzés, értékesítés, HR és PR.</li>
+<li><strong>Technológiai irányítás:</strong> A technológiai folyamat közvetlen működtetése, ide futnak be a folyamat, illetve a környezet fizikai állapotát jellemző jelek, és innen indulnak ki a folyamat állapotát módosító beavatkozások. Tovább tagolható felügyelői irányításra, szabályozó irányításra és sorrendi irányításra.
+<ul>
+<li><strong>Felügyelői irányítás:</strong> Analóg és digitális folyamatjelek mérése és regisztrálása, ellenőrzések, számított mennyiségek képzése, adattárolás és archiválás, adatmegjelenítés, adat- és eseménynaplózás, kezelői beavatkozások, beállítások, munkapontváltások, parancsok kiadása az alacsonyabb szint számára.</li>
+<li><strong>Sorrendi irányítás:</strong> Vezérlő rendszerek működtetése, mint bekapcsolás, kikapcsolás, léptetés, programváltás. Jellemzően szakaszos technológiákban alkalmazott irányítási módszer, ahol a végtermék lépéssorozatokon keresztül, adagokban vagy receptúra alapján készül.</li>
+<li><strong>Szabályozó irányítás:</strong> Elsősorban szabályozási körök működtetése, főként a folytonos technológiákra jellemző, ahol a végtermék folyamatos átalakulás során képződik. Elsődleges feladat a technológiai folyamat folytonosságának fenntartása vagy bizonyos állapotjelzők fenntartása.</li>
+</ul>
+</li>
+</ul>
+</div>
+</body>
+
+</html>
